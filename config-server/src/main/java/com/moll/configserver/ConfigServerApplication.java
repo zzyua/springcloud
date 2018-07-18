@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
-//config-server-step-2   开启配置服务器的功能
+//config-server-step-2   开启配置服务器的功能 测试
 @EnableConfigServer
 public class ConfigServerApplication {
 
