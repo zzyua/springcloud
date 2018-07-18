@@ -1,0 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8769
+spring:
+  application:
+    name: service-zuul
+#配置路由网关 zuul
+#zuul-step-3
+zuul:
+  routes:
+#   配置 ribbon 的路由：serviceId: service-ribbon 为ribbon modual 的spring.application.name
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+# test     localhost:8769/api-a/ribbon/name?name=ewq
+#   配置 feign 的路由：serviceId: service-feign 为feign modual 的spring.application.name
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
