@@ -1,0 +1,24 @@
+#spring.cloud.config.label 指明远程仓库的分支
+#spring.cloud.config.profile
+#dev开发环境配置文件
+#test测试环境
+#pro正式环境
+spring:
+  application:
+    name: config-client
+  cloud:
+#  configclient-step-2  注意：需要配置 label 和  profile
+    config:
+      label: master
+      profile: dev
+#      1、高可用的分布式配置中心(Spring Cloud Config)  不直接指定uri
+#      uri: http://localhost:8888/
+#      2、高可用的分布式配置中心(Spring Cloud Config)
+#  spring.cloud.config.discovery.enabled 是从配置中心读取文件。
+#  spring.cloud.config.discovery.serviceId  配置中心[configserver]的servieId，即服务名。
+      discovery:
+        enabled: true
+        service-id: config-server
+
+server:
+  port: 8881
