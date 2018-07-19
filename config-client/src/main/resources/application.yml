@@ -3,6 +3,16 @@
 #dev开发环境配置文件
 #test测试环境
 #pro正式环境
+
+server:
+  port: 8881
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
 spring:
   application:
     name: config-client
@@ -19,6 +29,23 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+    bus:
+      refresh:
+        enabled: true
+  rabbitmq:
+    host: 47.98.131.254
+    port: 5672
+    username: admin
+    password: 123456
 
-server:
-  port: 8881
+
+
+
+#  http://localhost:8881/bus/refresh  权限关闭
+management:
+  security:
+    enabled: false
+
+
+
+

@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.moll</groupId>
-	<artifactId>config-client</artifactId>
+	<artifactId>server-zipkin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>config-client</name>
-	<description>springcloud config-Client 的一个demo</description>
+	<name>server-zipkin</name>
+	<description>服务链路追踪(Spring Cloud Sleuth) 到一个demo</description>
 
 	<parent>
 		<groupId>com.moll</groupId>
@@ -24,41 +24,23 @@
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 
-
-		<!--configclient-step-1-->
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-
-        <!--消息总线(Spring Cloud Bus) start -->
-
-		<dependency>
-			<groupId>org.springframework.retry</groupId>
-			<artifactId>spring-retry</artifactId>
+			<groupId>io.zipkin.java</groupId>
+			<artifactId>zipkin-server</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
+			<groupId>io.zipkin.java</groupId>
+			<artifactId>zipkin-autoconfigure-ui</artifactId>
+			<!--<version>2.4.3</version>-->
+			<scope>runtime</scope>
 		</dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <!--end-->
 
 
 	</dependencies>

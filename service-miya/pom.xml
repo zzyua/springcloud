@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.moll</groupId>
-	<artifactId>config-client</artifactId>
+	<artifactId>service-miya</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>config-client</name>
-	<description>springcloud config-Client 的一个demo</description>
+	<name>service-miya</name>
+	<description>service-miya  服务链路追踪(Spring Cloud Sleuth) 的一个demo</description>
 
 	<parent>
 		<groupId>com.moll</groupId>
@@ -30,35 +30,16 @@
 		</dependency>
 
 
-		<!--configclient-step-1-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-
-        <!--消息总线(Spring Cloud Bus) start -->
-
-		<dependency>
-			<groupId>org.springframework.retry</groupId>
-			<artifactId>spring-retry</artifactId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
+			<groupId>com.moll</groupId>
+			<artifactId>baseModule</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <!--end-->
 
 
 	</dependencies>

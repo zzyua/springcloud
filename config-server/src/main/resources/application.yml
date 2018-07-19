@@ -22,6 +22,7 @@ spring:
           default-label: master
           username: 260787342@qq.com
           password: zhenyu7.16
+          basedir: /Users/shoushinsakai/data
 
 server:
   port: 8888
